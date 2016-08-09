@@ -15,11 +15,8 @@ var plugins = [
   })
 ];
 
-// npm run dev
-if (ENV === 'development') {
-  // automatically open the browser
-  plugins.push(new OpenBrowserPlugin({url: 'http://localhost:3001/'}));
-}
+// TODO: find a way to set development variable
+plugins.push(new OpenBrowserPlugin({url: 'http://localhost:3001/'}));
 
 module.exports = webpackMerge(commonConfig, {
 	devtool: 'source-map',
@@ -35,7 +32,7 @@ module.exports = webpackMerge(commonConfig, {
     host: '0.0.0.0',
     port: 3001,
     proxy: {
-      "/Api/*": {
+      "/api/*": {
         "target": {
           "host": "localhost",
           "protocol": 'http:',
