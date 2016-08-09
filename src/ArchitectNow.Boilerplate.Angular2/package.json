@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"start": "npm run dev",
-		"dev": "NODE_ENV=development webpack-dev-server --config config/webpack.dev.js --inline --progress --profile --colors --watch --display-error-details --display-cached",
+		"dev": "webpack-dev-server --config config/webpack.dev.js --inline --progress --profile --colors --watch --display-error-details --display-cached",
 		"test": "karma start karma.conf.js",
 		"posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
 		"coverage": "http-server -c-1 -o -p 9875 ./coverage",
