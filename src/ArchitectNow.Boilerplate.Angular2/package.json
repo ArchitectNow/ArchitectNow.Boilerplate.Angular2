@@ -8,7 +8,7 @@
 		"test": "karma start karma.conf.js",
 		"posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
 		"coverage": "http-server -c-1 -o -p 9875 ./coverage",
-		"publish": "npm prune && npm install && npm run typings --prune && npm run typings --install && webpack --progress --colors"
+		"publish": "npm prune && npm install && webpack --progress --colors"
 	},
 	"dependencies": {
 		"@angular/common": "2.0.0-rc.4",

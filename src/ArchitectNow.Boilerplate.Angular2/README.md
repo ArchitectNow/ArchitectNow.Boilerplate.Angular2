@@ -9,5 +9,5 @@ NOTE: The bundle generated from webpack-dev-server is served from memory so ther
 
 # How to deploy
 ```bash
-npm publish
+npm run publish
 ```
