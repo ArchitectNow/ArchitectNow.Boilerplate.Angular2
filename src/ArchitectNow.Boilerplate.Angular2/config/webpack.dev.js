@@ -39,7 +39,7 @@ module.exports = webpackMerge(commonConfig, {
         "target": {
           "host": "localhost",
           "protocol": 'http:',
-          "port": 80
+          "port": 17797
         },
         changeOrigin: true,
         secure: false
@@ -48,7 +48,7 @@ module.exports = webpackMerge(commonConfig, {
 				"target": {
 					"host": "localhost",
 					"protocol": 'http:',
-					"port": 80
+					"port": 17797
 				},
 				changeOrigin: true,
 				secure: false
