@@ -1,0 +1,1 @@
+@powershell -NoProfile -ExecutionPolicy Bypass -File Prepare-Project.ps1
