@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ArchitectNow.Boilerplate.Angular2.API.V1
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class TestController : BaseController
     {
         // GET: api/values

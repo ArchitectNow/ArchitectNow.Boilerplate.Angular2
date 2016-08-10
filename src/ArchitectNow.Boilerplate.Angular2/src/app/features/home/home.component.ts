@@ -7,7 +7,7 @@ import { ValuesService } from "../../services/values.service";
 })
 export class HomeComponent implements OnInit {
 
-    values: any[];
+    values: string[];
     constructor(private _valuesService: ValuesService) {}
 
     ngOnInit() {

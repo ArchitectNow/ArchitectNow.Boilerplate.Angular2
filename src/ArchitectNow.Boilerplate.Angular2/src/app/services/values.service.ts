@@ -10,7 +10,7 @@ export class ValuesService extends BaseDataService {
         super(http)
     }
 
-    getValues() {
-        return this.http.get('api/test').map(res => res.json()) as Observable<any>;
+    getValues() : Observable<string[]> {
+        return this.http.get('api/v1/test').map(res => res.json()) as Observable<string[]>;
     }
 }
