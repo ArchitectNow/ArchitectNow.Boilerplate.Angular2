@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ValuesService } from "../../services/values.service";
 
+//Hello world
 @Component({
     template: require('./home.component.html'),
     styles: [require('./home.component.scss')],

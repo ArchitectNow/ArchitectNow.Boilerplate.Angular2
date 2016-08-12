@@ -10,8 +10,8 @@ const ENV = process.env.NODE_ENV;
 
 var plugins = [
   new webpack.ProvidePlugin({
-    $: "jquery",
-    jQuery: "jquery"
+	$: "jquery",
+	jQuery: "jquery"
   })
 ];
 
@@ -29,18 +29,18 @@ module.exports = webpackMerge(commonConfig, {
 	},
 	plugins: plugins,
 	devServer: {
-    host: '0.0.0.0',
-    port: 3001,
-    proxy: {
-      "/api/*": {
-        "target": {
-          "host": "localhost",
-          "protocol": 'http:',
-          "port": 17797
-        },
-        changeOrigin: true,
-        secure: false
-      },
+	host: '0.0.0.0',
+	port: 3001,
+	proxy: {
+	  "/api/*": {
+		"target": {
+		  "host": "localhost",
+		  "protocol": 'http:',
+		  "port": 17797
+		},
+		changeOrigin: true,
+		secure: false
+	  },
 			"/swagger/*": {
 				"target": {
 					"host": "localhost",
@@ -50,10 +50,10 @@ module.exports = webpackMerge(commonConfig, {
 				changeOrigin: true,
 				secure: false
 			}
-    },
-    // required for html5 router
-    historyApiFallback: true,
-    outputPath: helpers.build(),
+	},
+	// required for html5 router
+	historyApiFallback: true,
+	outputPath: helpers.build(),
 		stats: 'minimal'
 	}
 });
