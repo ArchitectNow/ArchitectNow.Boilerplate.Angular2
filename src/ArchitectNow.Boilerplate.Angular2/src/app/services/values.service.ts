@@ -1,5 +1,5 @@
 import { Http } from "@angular/http";
-import { BaseDataService } from "./base_data.service";
+import { BaseDataService } from "./base-data.service";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 
@@ -10,7 +10,7 @@ export class ValuesService extends BaseDataService {
         super(http)
     }
 
-    getValues() : Observable<string[]> {
+    getValues (): Observable<string[]> {
         return this.http.get('api/v1/test').map(res => res.json()) as Observable<string[]>;
     }
 }

@@ -1,5 +1,3 @@
-
-
 import { RequestOptions, Http, Headers, URLSearchParams } from "@angular/http";
 import { Observable } from "rxjs";
 export class BaseDataService {

@@ -113,7 +113,7 @@ module.exports = {
        *
        * See: https://github.com/webpack/json-loader
        */
-      { test: /\.json$/, loader: 'json-loader', exclude: [helpers.src('playground', 'index.html')] },
+      { test: /\.json$/, loader: 'json-loader' },
 
       /**
        * Raw loader support for *.css files
@@ -121,7 +121,7 @@ module.exports = {
        *
        * See: https://github.com/webpack/raw-loader
        */
-      { test: /\.css$/, loader: 'raw-loader', exclude: [helpers.src('playground', 'index.html')] },
+      { test: /\.css$/, loader: 'raw-loader' },
 
       /**
        * Raw loader support for *.html
@@ -129,7 +129,7 @@ module.exports = {
        *
        * See: https://github.com/webpack/raw-loader
        */
-      { test: /\.html$/, loader: 'raw-loader', exclude: [helpers.src('playground', 'index.html')] }
+      { test: /\.html$/, loader: 'raw-loader', }
 
     ],
 

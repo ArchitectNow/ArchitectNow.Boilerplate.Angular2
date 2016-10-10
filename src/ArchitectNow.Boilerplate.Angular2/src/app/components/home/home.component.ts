@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ValuesService } from "../../services/values.service";
 
-//Hello world
 @Component({
     template: require('./home.component.html'),
     styles: [require('./home.component.scss')],
@@ -9,9 +8,10 @@ import { ValuesService } from "../../services/values.service";
 export class HomeComponent implements OnInit {
 
     values: string[];
-    constructor(private _valuesService: ValuesService) {}
 
-    ngOnInit() {
+    constructor (private _valuesService: ValuesService) {}
+
+    ngOnInit () {
         this._valuesService.getValues()
             .subscribe((values) => this.values = values);
     }
