@@ -121,6 +121,11 @@ module.exports = {
 		return [require('autoprefixer')];
 	},
 	plugins: [
+		new webpack.ContextReplacementPlugin(
+			// The (\\|\/) piece accounts for path separators in *nix and Windows
+			/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+			helpers.src()
+		),
 		/*
 		 * Plugin: ForkCheckerPlugin
 		 * Description: Do type checking in a separate process, so webpack don't need to wait.
