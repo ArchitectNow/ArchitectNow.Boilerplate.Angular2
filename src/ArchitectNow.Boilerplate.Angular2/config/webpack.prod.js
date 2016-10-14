@@ -5,7 +5,7 @@ var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var WriteFilePlugin = require('write-file-webpack-plugin');
-var CompressionPlugin = require("compression-webpack-plugin");
+
 var _ = require('lodash');
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 var config = _.merge({}, commonConfig);
@@ -27,13 +27,6 @@ module.exports = webpackMerge(config, {
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin('[name].[hash].css'),
-    new CompressionPlugin({
-      asset: "[path].gz[query]",
-      algorithm: "gzip",
-      test: /\.js$|\.css$/,
-      threshold: 10240,
-      minRatio: 0.8
-    }),
     new webpack.DefinePlugin({
       'process.env': {
         'ENV': JSON.stringify(ENV)

@@ -36,7 +36,7 @@ module.exports = {
 	entry: {
 		'css/styles': helpers.src('scss', 'Bootstrap.scss'),
 		'scripts/vendor': helpers.src('app', 'vendor.ts'),
-		'scripts/bootstrap': helpers.src('app', 'bootstrap.ts'),
+		'scripts/app': helpers.src('app', 'bootstrap.ts'),
 		'scripts/polyfills': helpers.src('app', 'polyfills.ts')
 	},
 
