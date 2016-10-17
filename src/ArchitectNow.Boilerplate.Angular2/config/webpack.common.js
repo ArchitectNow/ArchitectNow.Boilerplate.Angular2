@@ -34,7 +34,6 @@ module.exports = {
 	 * See: http://webpack.github.io/docs/configuration.html#entry
 	 */
 	entry: {
-		'css/styles': helpers.src('scss', 'Bootstrap.scss'),
 		'scripts/vendor': helpers.src('app', 'vendor.ts'),
 		'scripts/app': helpers.src('app', 'bootstrap.ts'),
 		'scripts/polyfills': helpers.src('app', 'polyfills.ts')
@@ -80,6 +79,7 @@ module.exports = {
 				test: /\.ts$/,
 				loaders: [
 					'awesome-typescript-loader',
+					'angular2-router-loader'
 				],
 				exclude: [/\.(spec|e2e)\.ts$/]
 			},

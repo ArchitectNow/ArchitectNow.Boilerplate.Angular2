@@ -6,10 +6,7 @@ var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var WriteFilePlugin = require('write-file-webpack-plugin');
 
-var _ = require('lodash');
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
-var config = _.merge({}, commonConfig);
-config.plugins = [];
 
 module.exports = webpackMerge(config, {
   devtool: 'source-map',
