@@ -4,8 +4,10 @@ import { RouterModule } from "@angular/router";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { NgModule } from "@angular/core/src/metadata/ng_module";
-import { routes } from "./routes";
 import { HomeComponent } from "./components/home/home.component";
+import { APP_ROUTES } from "./app.routes";
+import { SharedModule } from "./components/shared/shared.module";
+import { SidebarService } from "./components/shared/sidebar/sidebar.service";
 
 @NgModule({
     declarations: [
@@ -14,16 +16,18 @@ import { HomeComponent } from "./components/home/home.component";
     ],
     imports: [
         BrowserModule,
-        RouterModule.forRoot(routes),
+        HttpModule,
         FormsModule,
         ReactiveFormsModule,
-        HttpModule
+        SharedModule,
+        RouterModule.forRoot(APP_ROUTES),
+    ],
+    providers: [
+        SidebarService
     ],
     bootstrap: [
         AppComponent
     ],
-    providers: [
- 
-    ]
 })
-export class AppModule {}
+export class AppModule {
+}
