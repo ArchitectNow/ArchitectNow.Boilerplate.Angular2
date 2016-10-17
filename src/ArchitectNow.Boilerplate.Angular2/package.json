@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack-dev-server --watch --progress --config config/webpack.dev.js --profile",
-    "publish": "npm prune && npm install && webpack --progress --colors",
+    "prod": "webpack --progress --config config/webpack.prod.js --profile",
     "start": "npm run dev"
   },
   "dependencies": {
