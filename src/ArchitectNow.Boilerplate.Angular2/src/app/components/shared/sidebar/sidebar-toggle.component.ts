@@ -3,8 +3,8 @@ import { SidebarService } from "./sidebar.service";
 
 @Component({
     selector: 'sidebar-toggle',
-    template: require('./sidebar-toggle.component.html'),
-    styles: [require('./sidebar-toggle.component.scss')],
+    templateUrl: './sidebar-toggle.component.html',
+    styleUrls: ['./sidebar-toggle.component.scss'],
 })
 export class SidebarToggleComponent {
 
